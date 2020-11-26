@@ -6,6 +6,7 @@ type Article struct {
 	ID               int       `json:"id"`
 	Slug             string    `json:"slug"`
 	Title            string    `json:"title"`
+	Description      string    `json:"description"`
 	UserID           int       `json:"user_id"`
 	BookID           int       `json:"book_id"`
 	Format           string    `json:"format"`
