@@ -10,6 +10,16 @@
  - 博客地址 `https://blo.dreamer2q.wang`    
  - 语雀文档 `https://www.yuque.com/dreamer2q/blog` 
  
+## 语雀配置
+
+ - 为了获取文章列表的时候`description`不为空，需要设置首页风格为专栏
+
+![配置语雀](https://i.imgur.com/h6cb8Xk.png)
+
+ - 配置token
+ 
+在账户设置里面生成一个token即可，同时获取命名空间，这样语雀的配置就完成了。
+ 
 ## 获取文章列表
 
  - GET `api/articles` 
