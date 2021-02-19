@@ -47,7 +47,16 @@ func ProxyArticleList() ([]Article, error) {
 	}
 	var out []Article
 	err = json.Unmarshal(data, &out)
-	return out, err
+	if err != nil {
+		return nil, err
+	}
+	for i := range out {
+		if out[i].CustomDescription != "" {
+			out[i].Description = out[i].CustomDescription
+			out[i].CustomDescription = ""
+		}
+	}
+	return out, nil
 }
 
 func ProxyArticleDetail(slug string) (*ArticleDetail, error) {

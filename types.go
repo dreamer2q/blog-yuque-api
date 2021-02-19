@@ -1,20 +1,23 @@
 package main
 
-import "time"
+import (
+	"time"
+)
 
 type Article struct {
-	ID               int       `json:"id"`
-	Slug             string    `json:"slug"`
-	Title            string    `json:"title"`
-	Description      string    `json:"description"`
-	UserID           int       `json:"user_id"`
-	BookID           int       `json:"book_id"`
-	Format           string    `json:"format"`
-	LikesCount       int       `json:"likes_count"`
-	CommentsCount    int       `json:"comments_count"`
-	FirstPublishedAt time.Time `json:"first_published_at"`
-	WordCount        int       `json:"word_count"`
-	Cover            string    `json:"cover"`
+	ID                int       `json:"id"`
+	Slug              string    `json:"slug"`
+	Title             string    `json:"title"`
+	Description       string    `json:"description"`
+	CustomDescription string    `json:"custom_description,omitempty"`
+	UserID            int       `json:"user_id"`
+	BookID            int       `json:"book_id"`
+	Format            string    `json:"format"`
+	LikesCount        int       `json:"likes_count"`
+	CommentsCount     int       `json:"comments_count"`
+	FirstPublishedAt  time.Time `json:"first_published_at"`
+	WordCount         int       `json:"word_count"`
+	Cover             string    `json:"cover"`
 }
 
 type ArticleDetail struct {
