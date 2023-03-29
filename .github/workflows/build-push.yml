@@ -29,7 +29,7 @@ jobs:
         run: go build -tags netgo -v -o main .
 
       - name: Publish Docker
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: registry.cn-hangzhou.aliyuncs.com/dreamer2q/blog-yuque-api
           registry: registry.cn-hangzhou.aliyuncs.com
